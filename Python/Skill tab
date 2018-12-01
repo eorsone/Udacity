@@ -1,0 +1,85 @@
+Skill tab
+
+Energy Skill:
+
+Spearman's Chant:	3
+Increase team morale while also having a chance to increase stats depending on morale.
+
+Quick Draw:		5
+Must be the first attack you initate with a sword. Deals 150% of physical damage. May be stacked with other skills for starting move. In case of exchanges, this skill will always go first.
+
+Counter stance : counter rate goes up to 95% until stance is broken by moving or any other action
+-------------------------------------------------------------------------
+
+Magic Skills:
+
+Ice Spear:	5 mp
+Deals 120% magic damage with a 30% chance of causing status effect Ice.
+
+Absorber	10
+Acts as defense move to counter long range skills and use them either as a counter or as a normal attack during your turn
+
+Flame wall(flame dome beta): 	10
+Summons a fire wall that does 100% magic damage plus burn. Last for 1 turn
+
+High Grade Shield: 20 mp
+Allows 2 attacks under 30 damage to be completely negated. If damage exceeds 50, both barriers will fall.
+
+Hercules:	30 mp
+Increases physical damage by 10 for 2 turns.
+
+Mountain Divider:
+Damage: 150%
+A strong heavy attack that can cut through anything below 50% of its total attack damage. Inflict status broken.
+--------------------------------------------------------------------------
+
+Spirit Skills:
+
+Spirit Awakening, Ice Fairy Freya: 20 sp
+
+Aura Push:	5
+Pushes all enemies around you back 2 spaces.
+Attack = 50% of base attack 
+
+Water blade:	5
+Transforms your weapon into liquid to pass your enemies weapon and then turn your blade to ice. Guarinteed hit.
+Attack = 75% of physical damage
+
+Icey Glare: 5
+If fear is < 10: stat -2
+If fear is < 30: frozen effect
+
+Ice Ball:	5
+A magic spell that can efflict ice status on enemy. Ice status last until end of next turn unless stacked. Range can be increase at the cost of 2 sp per space. Max stack = 3
+Ice 1: movement - 2 (cold)
+Ice 2: unable to move (freeze)
+Ice 3: completely immobile (frozen)
+Attack = 100% of base attack
+
+Flash Step :	???
+allows unit to instantly move  spaces in any direction. Each space cost 2 sp
+
+Puppet control: 	10
+allows you to use a puppet as a unit
+Puppet will die within 2 turns after use
+Puppet will deal 50% of base damage and break if hit.
+
+Duplicate: 10 
+
+Allows any move to be doubled.
+
+Lightning storm: 15 
+Inflicts 150% magic damage to enemy. Can increase range if spend 5 sp. 50% chance of status effect shock. 20% chance of zapping neighboring units
+
+Shock 1: chance of move being taken away by 50%
+Shock 2: chance of paralysis by 50%
+Shock 3: chance of paralysis by 75%
+
+Water Ball: 25
+Summons 5 water balls to deal 80% of magic damage. Enemy will be under wet effect.
+
+Wet effect:
+	Lightning:
+		damage increase by 20% and if enemy is next to wet target, that target will also received damage.
+
+	Ice: instant ice 2
