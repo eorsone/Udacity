@@ -4,7 +4,9 @@
  	<title></title>
  </head>
  <body>
-	My HTML Notes<br>
+	<h1>My HTML Notes</h1>
+
+	<h2>Understanding HTML</h2>
 
 	<p>HTML stands for hypertext markup lanaguage. <em>HTML</em> is made up of <em>text and markup</em></p>
 
@@ -18,12 +20,40 @@
  	<_> are called tags.<br>
 
  	Opening tags are the beginning of the element and written like <_>
- 	Ending tags are the end of the element and are written like </_>
+ 	Ending tags are the end of the element and are written like < /_>
  	</p>
 
  	Whitespace - spaces, tabs, and line breaks.<br>
 
- 	<p>HTML, unless specified otherwise by tag, will always display text side-by-side with a single space character in between. One way of including whitespace in your browser is to use < br>(no space in back)</p>
+ 	<p>HTML, unless specified otherwise by tag, will always display text side-by-side with a single space character in between. One way of including whitespace in your browser is to use < br>(no space in back)
+ 	</p>
+
+ 	<p>Nesting is putting elements within other elements. There are a few rules for nesting. Two html elements cannot overlap, one must be inside another and p(paragraph) cannot be within another p.
+ 	</p>
+
+ 	<h2>Block vs Inline</h2>
+
+
+ 	<p>Blocks such as p creates an invisible blocks around the contents of the element. Blocks has height, width, and two margins above and below it. Elements that do not create block, but rather, flow with the text are called inline.
+ 	</p>
+
+ 	<h3>Importance of div</h3>
+
+ 	<p>The div element is considered one of the most important elements in html. Like p, div is a block element with width, height, and margins. Unlike p, div is more of a generic container for elements. Div stands for divition and is used to help divide content into sections. It is what is used to help organize and build the layout of the page
+ 	</p>
+
+ 	<p>There are some elements that do not work on their own, they are required to be within another element. A good example of this is the li element which is always found within a list. There are two types of list in html, ordered(ol) and unordered(ul.) An ordered list uses letters and numbers to organize the content of the list(the li.) while the unordered list uses dots and bullet point to present a list. List can be nested inside other list, but li cannot be nested.
+ 	</p>
+
+ 	<p>
+ 		Some elements do not require a closing tag because the ending tag can be implied by the presents of another element of the same kind.
+
+ 		<h3>Examples</h3>
+ 			<ul>
+ 				<li>li</li>
+ 				<li>p</li>
+ 			</ul>
+ 	</p>
 
  </body>
  </html>
