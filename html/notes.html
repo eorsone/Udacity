@@ -21,6 +21,8 @@
 
  	Opening tags are the beginning of the element and written like <_>
  	Ending tags are the end of the element and are written like < /_>
+
+ 	For more tags, check out this<a href="file:///C:/Users/Orson%20G7/Documents/Udacity/html/tags.html" target = "_blank">link</a>
  	</p>
 
  	Whitespace - spaces, tabs, and line breaks.<br>
@@ -34,10 +36,11 @@
  	<h2>Block vs Inline</h2>
 
 
- 	<p>Blocks such as p creates an invisible blocks around the contents of the element. Blocks has height, width, and two margins above and below it. Elements that do not create block, but rather, flow with the text are called inline.
+ 	<p>Blocks such as p creates an invisible blocks around the contents of the element. Blocks has height, width, and two margins above and below it. Blocks normally, unless told otherwise, will extend to the full width of the display. Blocks normally have a specific way they display their content, except for <em>div</em> which puts the content in a generic box with no changes. Elements that do not create block, but rather, flow with the text are called inline.
  	</p>
 
- 	<h3>Importance of div</h3>
+ 	<h3>Importance of div
+ 	</h3>
 
  	<p>The div element is considered one of the most important elements in html. Like p, div is a block element with width, height, and margins. Unlike p, div is more of a generic container for elements. Div stands for divition and is used to help divide content into sections. It is what is used to help organize and build the layout of the page
  	</p>
@@ -55,5 +58,40 @@
  			</ul>
  	</p>
 
+ 	<h3>Web addresses</h3>
+
+ 	<p>
+ 		Every site, page, image, and file on the web has a web address. A web address is also known as a URL (Uniform Resource Locator). A URL tells the browsers how to locate a specific resource. URL can vary in the format they are written, some contain http or https while others do not; this is only allowed in the browser. When using html, the URL must be written completely with the http:// included(specifically the ://), this is known as a qualified or absolute URL. The following are type of absolute/qualified URL:
+
+ 			<ul>
+ 				<h4>Protocol - ways that a browser can get something</h4>
+ 				<li>http: - tells the browser not to use secure encryption</li>
+ 				<li>https: - tells the browser to use a secure encryption </li>
+ 				<li>file - used when locating files on the local drive.</li>
+ 			</ul>
+ 		The actual address of a page is called the domain name <em>example:en.wikipedia.org</em>. Files such as the ones that are stored on our computer do not have a domain name because they are stored locally instead of on the world wide web. The / after the domain name is called the file path which is the name of the directory and the file that the url is referring to. These will normally appear empty if you are at the homepage of the website.
+ 	</p>
+
+ 	<p>
+ 		Hypertext are located all over the web. Hypertext refers to textual documents with references between them called links. Links are created with the element <em>a</em>. <em>a</em> stands for anchor because it anchors an address to a pieces of text on the web. Formate of <em>a</em> looks like <em>a href = "http://example.net"</em>. The part after the <em>a</em> is called the attribute, it is made up of a name(href) and a value(http://example.net) The href stands for hypertext reference, it is commonly found in tags that link to another document. The content of the <em>a</em> tag is known as the link text, it is how the link appears on the page. <em>If you include attribute <strong>target = "_blank"</strong> it will open the link in a new tab.</em>
+
+ 	</p>
+
+ 	<p>
+ 		To create an image in html, the element <em>img</em> must be used. This element works similarly to the element<em>a</em>; however, unlike <em>a</em> that uses one attribute, img has two attributes: <em>src and alt</em>. <em>src</em> stands for source, which is where the url of the image goes. <em>alt</em> stands for alternate and it describes the image being displayed. If for some reason the image cannot be displayed, the <em>alt</em> will be displayed instead; if the person browsing your page is blind and the computer is narrating the page, the <em>alt</em>text will be read to them. The image tag <strong>does not</strong> copy the image into your html file, it tells the html where to find the image(locally or on the server). The image tag is a empty element which means there is <strong>no content and no end tag</strong> 
+ 	</p>
+
+ 	<p>
+ 		When referring to local files that are located in the same folder, you don't need to completely type out the location, just the name of the file. Due to the lack of ://, the browser will search for this file in the same directory of the html file. This is known as relative URL. It short and keeps the html file and the image file together in the same folder. A URL with no :// is <strong>always treated as a relative URL</strong>
+ 	</p>
+
+ 	<h3>DOCTYPE, Head, and Body</h3>
+
+ 	<p>
+ 		The DOCTYPE tag identify which type of HTML we are using. Due to long and excessive DOCTYPES in the past, the current DOCTYPE has been simplified to !DOCTYPE html. DOCTYPE is normally found at the top of the HTML file and it tells the browser we intend the page to be treated as a modern HTML to prevent bugs. If the DOCTYPE tag is not included, the browser will enter something known as quirk mode. Quirk mode makes the browser try to be more compatible with older forms of HTML. 
+ 	</p>
+ 	<p>
+ 		
+ 	</p>
  </body>
  </html>
