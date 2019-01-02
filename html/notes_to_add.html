@@ -67,6 +67,45 @@
 		There are two common ways to apply CSS to a document. One way is to directly apply the style under the style tab at the top of the html;however, this can get a bit messy when using a lot of CSS and applying it to multiple documents(it isn't as efficient.) Another way is to put the CSS into a seperate file and then reference the file in the head of the html. To do this, apply the special tag &lt;link rel="stylesheet" href = "(url of stylesheet file)"&gt;(If file is in same directory, you can just type the file name). Keep in mind that you can only use one method at a time. A stylesheet and a style element cannot be in the same doc.
 	</p>
 	<h3>color</h3>
-	<p>Computers use the primary colors,red green and blue, and mixes them to display all the colors visible on a computer screen. rbg can be used to write the percentage of red, green, or blue you would like to display. Each of the primary colors can have 256 possible values(byte value.(0-255) Another way of writing this is to use Hex. In hex, each digit goes from 0-9 and then from A - F(up to 6)</p>
+	<p>Computers use the primary colors,red green and blue, and mixes them to display all the colors visible on a computer screen. rbg can be used to write the percentage of red, green, or blue you would like to display. Each of the primary colors can have 256 possible values(byte value.(0-255) Another way of writing this is to use Hex. In hex, each digit goes from 0-9 and then from A - F(up to 6)
+	</p>
+	<h3>Fonts</h3>
+	<p>
+		In a word processor, what is called fonts is actually the <em>font-family</em> in html(time new roman). Font-family will make text in the element show up in that font unless the font is not installed in that computer. This could be a problem because if the font is not installed on the computer, CSS will not style that element with any font except for the default. If you want the font to be a paticular sort of font, but do not care about the specific font, you can use what is known as a generic font families. There are five generic font families, they are:
+		<ul>
+			<li>Serif</li>
+			<li>San-Serif</li>
+			<li>Cursive</li>
+			<li>Fantasy</li>
+			<li>Monospace</li>
+		</ul>
+		Generic fonts are generally used as a fallback plan in case the browser does not have access to a particular font that we would like to use. Another way to avoid using the default font is to use a <em>Font Stack</em>. Font stacks are a list of font alternatives that the browser will attempt to use in the order they are placed. Normally at the end of a font stack, you'd put a generic font as the last options.
+		<br>
+		In some cases, you may want to underline, add bold, or italics to your CSS. Here are a few ways you can do that:
+		<ul>
+			<li>Bold- font-weight: bold;</li>
+			<li>italic- font-styleL italic;</li>
+			<li>underline- text-decoration: underline</li>
+		</ul>
+		If you want to style different properties of font on a singular line of code, you can use the command font. Font has the following css commands embeded into it already(the commands must be entered in this order.:
+		<ol>
+			<li>font-style</li>
+			<li>font-variant</li>
+			<li>font-weight</li>
+			<li>font-size</li>
+			<li>line-height</li>
+			<li>font-family</li>
+			<li>caption</li>
+			<li>icon</li>
+			<li>menu</li>
+			<li>message-box</li>
+			<li>small-caption</li>
+			<li>status-bar</li>
+			<li>initial</li>
+			<li>inherit</li>
+
+		</ol>
+		For more on fonts: click <a href="https://developers.google.com/fonts/docs/getting_started">here</a>
+	</p>
 </body>
 </html>
