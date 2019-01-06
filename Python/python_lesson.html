@@ -4,6 +4,7 @@
 	<title>Python</title>
 </head>
 <body>
+	<a href="python_lesson_2.html">Next Page</a>
 	<p>A program is a set of instructions, written on lines of code, for a computer to follow. Each line is an instruction for the computer to follow.
 	</p>
 	<h3>Variable</h3>
@@ -32,7 +33,7 @@
 	</p>
 	<h3>Modules</h3>
 	<p>
-		Modules are define as<strong>A file that has a collection of useful code that can be used in other python programs</strong>. To use a modules, you must include an import____ command at the top of the code. In the code below, turtle.Turtle(), the first turtle before the . is calling upon the module that we imported. The . tells the program to look for the code named Turtle inside the turtle module. This also applies to the amy.forward and amy.right commands below; all of these are already written in the turtle module. Lines like amy.forward and amy.right are refered to as method calls. Method calls always have the method followed by () and an input for python to run.
+		Modules are define as<strong> A file that has a collection of useful code that can be used in other python programs</strong>. To use a modules, you must include an import____ command at the top of the code. In the code below, turtle.Turtle(), the first turtle before the . is calling upon the module that we imported. The . tells the program to look for the code named Turtle inside the turtle module. This also applies to the amy.forward and amy.right commands below; all of these are already written in the turtle module. Lines like amy.forward and amy.right are refered to as method calls. Method calls always have the method followed by () and an input for python to run.
 		<br>
 		<img src="modules.png" alt="module image">
 	</p>
@@ -48,5 +49,44 @@
 	<p>
 		To reduce repeating, it is best to use something known as a loop. One type of loop is known as for loop. For loops look like this<strong> for ____ in [________](list):</strong> followed by a list of indented commmands. This commands runs the same commands as many times as there are objects in the list. It is worth mentioning that the list can be used as an input for a command. This is known as looping over the list. Loop can also be nested within loops(<strong>nested loop</strong>) by just indenting.
 	</p>
+	<h3>Statements</h3>
+	<p>
+		Statements are lines of text that give the computer some instruction to carry out. Statements can vary such as <strong>assignment statement, import statements, and call statements</strong>(these are all <strong>simple statements.</strong>) Simple statements are used to control <strong>whether, when, and how</strong> many times a code runs from top to bottom. If the statement has other statements inside of it, it is known as a <strong>compound statement</strong>.(for loop) Compound statements are less restricted in the order in which the code is run; for example, in a for loop, the loop is repeated several times before continuing down the line of code. The order in which the statements are executed is known as the <strong>control flow</strong> Since compound statements are made up of simple statements, they can also control <strong>whether, when, and how</strong> many times a code runs.
+	</p>
+	<h4>Note</h4>
+	<p>The range function is a easy way to get a certain number of items on the list starting from 0. For example if we typed sides = range(4), this would be like typing sides = [0,1,2,3]
+	</p>
+	<h3>Crunching numbers</h3>
+	<p>
+		Computers are able to do math just like a calculator; in coding these are known as <strong>arithmetic expressions</strong>
+		<ul>
+			<li>addition - uses the + sign</li>
+			<li>subtraction - uses the - sigh</li>
+			<li>multiplication - uses the * sign</li>
+			<li>division - uses the / sign</li>
+		</ul>
+		<strong>Expression</strong> is a piece of code that results in some value. It is also known as <strong>evaluation</strong>. In computer science,<strong>operators</strong> are the ones that tell us what operation we are preforming( + - * /), while <strong>operand</strong> are the values being operated on(anywhere where you can use a number in code, you can replace it with a arithmetic expression) You can use an arithmetic expression and store it as a variable.
+	</p>
+	<h3>Function</h3>
+	<p>
+		A <strong>call statement(call)</strong> is a statement that, when it runs, executes a block of code. It can also take in the input that the block of code needs to run, this is known as <strong>passing</strong>(giving input to a function.) An <strong>argument</strong> is the information being passed to a function. The function can then return an output of some kind. For example:
+		<br>
+		<em>for side in range(100)</em> - This line is <strong>calling</strong> the range function and <strong>passing</strong> it the <strong>argument</strong>100.
+		<br>
+		<strong>Note</strong> - A <strong>callable code</strong> is a code that will only run when a call statement is used.
+		<br>
+		<strong>Note</strong> - A <strong>function</strong> is a block of code that can be called and it does some task.
+
+	</p>
+	<h3>Method Call vs Function Call</h3>
+	<p>
+		A method is a piece of code that is associated with a particular object(like a variable). A function is nonspecific. A method is a subset of function. All methods are functions but not all functions are methods.
+	</p>
+
+	<h3>Variable scope</h3>
+	<p>
+		A scope is a part of the code for which a variable is defined. If a variable is define inside of a function, in can only be used <strong>inside the function</strong>(these are known as <strong>local scopes.</strong>) A <strong>global</strong> scope is one that is defined outside of the function and can be used anywhere else in the file. 
+	</p>
+	<a href="python_lesson_2.html">Next Page</a>
 </body>
 </html>
