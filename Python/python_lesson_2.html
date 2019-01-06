@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Python_2</title>
+</head>
+<body>
+	<a href="python_lesson.html"> Previous Page</a> <a href="python_lesson_3.html">Next Page</a>
+	<h3>Defining Functions</h3>
+	<p>
+		One good reason to define your own function is to prevent repetition of a useful piece of code that you may want to use several times in your program. To define a function:
+		<ol>
+			<li>Write the words <strong>def</strong>(stands for define) followed by the name of the function</li>
+			<li>Indent the next line so everything written will be inside the function</li>
+			<li>Put your code inside the function</li>
+		</ol>
+		Keep in mind that the function will not work unless you call it. TO call the function, simply write the functions name followed by ().
+	</p>
+
+	<h3>Parameters and Arguments</h3>
+	<p>
+		To allow the function to accept input, we must do it on the same line we define the function; more specifically, we place a variable between the ().(this is similar to an assignment statement and is known as <strong>parameters</strong>.) If you want more than one parameter, simply add a comma(,) after the first parameter(you would also use this same method when you call upon to arguments) The assignment goes in the order in which the parameters were written; for example
+		<br>
+		<em>def something(x,y)
+		<br>
+		something(20,10)
+		</em>
+		<br>
+		In this example x gets assigned 20 and y gets assigned 10
+	</p>
+	<h3>If Statements</h3>
+	<p>
+		<strong>If statments</strong> are compound statements that run only if a certain condition is met. If statements look like this: <em>if number == 4:</em>(followed by the command you want to run. Note that there is a ==(equality operator) instead of =; if there was just a =, it would be an assignment statement. You can also add an <strong>else</strong> statement which allows the run a seperate command for when the if statement isn't true.
+	</p>
+	<h3>Modulo</h3>
+	<p>The Modulo is related to , in the sense that if you divide, you sometimes have a remainder, that remainder is the modulo. Modulo are good for functions involvoing cyles or a repeated pattern of commands. If you set the module to x % y, the result will always be less than y before and will go up by 1 each time until the result equals y-1
+	</p>
+	<h3>Returns</h3>
+	<p>
+		Returns can be placed at the end of the function for it to return a value. In the example below, the function <em>times_ten</em> takes in the number 5 and return the number 50 which is then assigned to variable distance. 
+		<br>
+		<img src="returns.png" alt="return image"> 
+		Return can move a value from a function back to the one that calls it. There can be more than one return statement; however, the function can only return one return statement(and will always return the first return statement it finds.)
+	</p>
+	<h3>Random Module</h3>
+	<p>
+		A deterministic program: a program that always produes the same output for a given input
+		<br>
+		There are module that allows you to randomize a selection in python they are
+		<ul>
+			<li>random.randint - takes the lowest and highest integer and randomly select the numbers between that number</li>
+			<li>random.choice - take a list and returns a randomly chosen items from the list.</li>
+		</ul>
+		Note: you must import <strong>random</strong> into your document before you can use the random module.
+		<br>
+		Note: <strong>Don't forget the module name.</strong>  
+	</p>
+	<h3>Comparison Operators</h3>
+	<p>
+		You may want to use operators to compare numbers or set certain conditions, here are a few operation you can use in python
+		<ul>
+			<li>a == b - is a equal to b?</li>
+			<li>a < b - is a less than b?</li>
+			<li>a > b - is a greater than b?</li>
+			<li>a <= b - is a less than or equal to b?</li>
+			<li>a >= b - is a greater than or equal to b?</li>
+			<li>a != b - is a not equal to b?</li>
+		</ul>
+		All of these can be used in <strong>if</strong> statements
+	</p>
+	<h3>True or False</h3>
+	<p>
+		If statements always contain a condition such as <em>1 < 2</em>. For the statement, python must decide wheither the statement is true or false. Python uses the values <strong>"True" and "False"</strong> if the statement is true, python evaluate to the "True" value, likewise if the statement is false, python will evauluate to the "False" value. You can use these values in an <em>if</em> statement and also assign these values to a variable.
+	</p>
+
+
+	<a href="python_lesson.html"> Previous Page</a> <a href="python_lesson_3.html">Next Page</a>
+
+</body>
+</html>
