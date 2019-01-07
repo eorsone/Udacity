@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>to_add_to_main_notes</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<a href="C:/Users/orson/Documents/GitHub/Udacity/homepage.html">Homepage</a>
+	<a href="notes-2.html"> Previous Page</a>
+	<a href="notes-4.html">Next Page</a>
+	<a href="tags.html">Tag Dictionary</a>
+	<h2>CSS Syntax</h2>
+	<p>
+		In CSS there are two rulesets that are in play, <strong>Seletor and Declaration Block.</strong> Selectors determine which element will the the ruleset apply to; while, Declaration Blocks determines how the ruleset will modify the element(the rules that the element will follow).
+		<h3>example</h3>
+		<ul>
+			<li>li { color: green; }</li>
+		</ul>
+		In the example above, the li is the selector, which states that CSS will apply to all p elements, while the declaration block is the writing within curly braces, <em>color: green.</em> This is the format that CSS rules are writen in. Selectors are followed by the declaration block.
+
+		<h3>example</h3>
+		<ul>
+			<li>p { width: 50%; }
+				<br>
+				.weird {
+				color: purple;
+				font-size: large;
+			}
+			</li>
+		</ul>
+		.weird, being the selector, affects all elements with the <em>.weird</em> class. In the declaration block, the descriptive name(width, color, font-size, etc) is known as the property, after the colon(:), the value is written followed by a semicolon(;). In the example above, the width is the property and the value is 50%.
+	</p>
+	<p>
+		There are a multitude of selectors that can be used in CSS. Here are few different types that you will see.
+		<ul>
+			<li>Typ
+			e Selector - names the type of the html element and apply style to all.. Some examples are p, em, h2, body, etc</li>
+			<li>Class- A group of things with the same characteristics. To create a class, add class="" to the html element to catagories that element. When applying the class into CSS, you'll write the selector with a "." followed by the class name.</li>
+			<li>Id - Similar to class but only applies to one element. Class is written in CSS with a "#" in front</li>
+			<li>Descendant Selectors - Allows you to specifically target an element nested in another element. To apply, write the parent element's name first followed by the child element's name. </li>
+			<li>For more on selectors, visit <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">Mozilla</a></li>
+		</ul>
+	</p>
+	<h3>Cascading and Specificity</h3>
+	<p>
+		Cascading has to do with how the DOM tree gets its style define, specifically, it will style a node and all of its descendence. If there are two sets of code attempting to affect the same property, the one which is most specific will be applied. 
+		<br>
+		<img src="css_diagram_1.png" alt="css_diagram_1">
+	</p>
+	<h3>Units</h3>
+	<p>
+		In CSS, the basic unit used is pixels(px). A pixel is 1/96 of an inch or 1 inch is equal to 96 pixels. Another unit is the point(pt.) A point is 1/72 of an inch or 72 point = 1 inch. Pixels and points are based on inches while some other units are based on something on the page. Em for example is based on the font size of the text in the element.
+	</p>
+	<h3>Boxes</h3>
+	<p>
+		In previous lessons on html, we discovered that some elements such as &lt;p&gt; and &lt;div&gt; put a an invisible box around the content of the element. CSS allows us to customize the width and height of the box as well as the following:
+		<ul>
+			<li>Padding - space around the content of the box(between the content and the border)</li>
+			<li>Border - area around the box</li>
+			<li>Margin - the space that the browser makes between this box and other boxes.</li>
+		</ul>
+		You can customize these properties by using px or ems. If you want to move the boxes toward the right rather than down, you can use the command  float: right. This command tells the browser to try and move the box toward any direction of the page, it is commonly used to move boxes around.
+	</p>
+	<h3>Percentages</h3>
+	<p>
+		When defining sizes in CSS, it is more common to use a percentage instead of an exact amount of px or em. Percentages go by the width or height of the box that it is inside. For example, if a &lt;div class = box&gt; is set to 100px and we set another div inside it to 50%, the div inside is going to be 50px. If the box is at the top of the document, 50% means 50% of the whole page. One thing to keep in mind, by default, width doesn't include the border and never includes the padding. This means that if you want two boxes to fit next to each other using the float command, you'd want to set the percentage below 50%. Percentages can also be used for scaling the size of elements up or down.
+	</p>
+	For more CSS commands, check out <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla</a>
+	<h3>Applying style to documents</h3>
+	<p>
+		There are two common ways to apply CSS to a document. One way is to directly apply the style under the style tab at the top of the html;however, this can get a bit messy when using a lot of CSS and applying it to multiple documents(it isn't as efficient.) Another way is to put the CSS into a seperate file and then reference the file in the head of the html. To do this, apply the special tag &lt;link rel="stylesheet" href = "(url of stylesheet file)"&gt;(If file is in same directory, you can just type the file name). Keep in mind that you can only use one method at a time. A stylesheet and a style element cannot be in the same doc.
+	</p>
+	<h3>color</h3>
+	<p>Computers use the primary colors,red green and blue, and mixes them to display all the colors visible on a computer screen. rbg can be used to write the percentage of red, green, or blue you would like to display. Each of the primary colors can have 256 possible values(byte value.(0-255) Another way of writing this is to use Hex. In hex, each digit goes from 0-9 and then from A - F(up to 6)
+	</p>
+	<h3>Fonts</h3>
+	<p>
+		In a word processor, what is called fonts is actually the <em>font-family</em> in html(time new roman). Font-family will make text in the element show up in that font unless the font is not installed in that computer. This could be a problem because if the font is not installed on the computer, CSS will not style that element with any font except for the default. If you want the font to be a paticular sort of font, but do not care about the specific font, you can use what is known as a generic font families. There are five generic font families, they are:
+		<ul>
+			<li>Serif</li>
+			<li>San-Serif</li>
+			<li>Cursive</li>
+			<li>Fantasy</li>
+			<li>Monospace</li>
+		</ul>
+		Generic fonts are generally used as a fallback plan in case the browser does not have access to a particular font that we would like to use. Another way to avoid using the default font is to use a <em>Font Stack</em>. Font stacks are a list of font alternatives that the browser will attempt to use in the order they are placed. Normally at the end of a font stack, you'd put a generic font as the last options.
+		<br>
+		In some cases, you may want to underline, add bold, or italics to your CSS. Here are a few ways you can do that:
+		<ul>
+			<li>Bold- font-weight: bold;</li>
+			<li>italic- font-styleL italic;</li>
+			<li>underline- text-decoration: underline</li>
+		</ul>
+		If you want to style different properties of font on a singular line of code, you can use the command font. Font has the following css commands embeded into it already(the commands must be entered in this order.:
+		<ol>
+			<li>font-style</li>
+			<li>font-variant</li>
+			<li>font-weight</li>
+			<li>font-size</li>
+			<li>line-height</li>
+			<li>font-family</li>
+			<li>caption</li>
+			<li>icon</li>
+			<li>menu</li>
+			<li>message-box</li>
+			<li>small-caption</li>
+			<li>status-bar</li>
+			<li>initial</li>
+			<li>inherit</li>
+
+		</ol>
+		For more on fonts: click <a href="https://developers.google.com/fonts/docs/getting_started">here</a>
+	</p>
+</body>
+</html>
