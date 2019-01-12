@@ -4,6 +4,62 @@
 	<title>Shell_workshop</title>
 </head>
 <body>
+	<h3>Introduction</h3>
+	<p>The shell is a command-line interface that run programs and shows the programs output; it is commonly used because of its speed and flexability. The shell is similar to programming languages in the same sense that they use special command words to function. Programs that run in the shell are known as terminals. The shell is the outermost layer of an operating system and allows you to interact with the tools of the operating system. There are various types of shells; one of the more commonly used ones is BASH. (Unix shell)
+	</p>
+	<p>
+		There are two types of shells: graphical shells and text shells. Graphical shells are ones where you use boxes, windows, and buttons to interact with the operating system. This type of interface is also known as a Graphical User Interface or <strong>GUI</strong> Text shell, by contract, use typed commands. Text shells are also known as Command-line interface or <strong>CLI</strong>
+	</p>
 
+	<p>To run commands in BASH(and several other shell langauges) simply type the command you want and hit <strong>ENTER</strong> At the botton of this page is a list of shell commands. It is worth noting that there are some special characters(like <strong>!</strong>) that have a special meaning. To avoid uses these symbols unintentionally, you can use <strong>''</strong>.
+
+	</p>
+	<h3>Navigating Directories</h3>
+	<p>
+		Directories are like the folders you see when you use your computer(like the download folder.) The shell has a way of listing the content of the directory via the <strong>ls</strong> command. ls means list. Normally when you open the shell, the shell will start off in your home directory. To list off the name of a different directory use ls followed by the directories name. To change the directory that the shell is looking at you can use the command <strong>cd</strong> which stands for change directory. Cd can also be used to go to another directory that is not directly inside the current directory, use the command followed by all the steps you need to get to the directory you want(going down); this is known as a <strong>relative path</strong>. If you want to access any file located anywhere, you can type out the full path to get to that file starting from the home directory; this is known as an <strong>absolute path</strong>.
+		<br>
+		If you want to go back a directory(aka parent directory) use the command <strong>..</strong>. In case you get lost, you can use the pwd (print working directory) command and it will print the location direction. Working directory are the current directory. The unix system uses forward slashes not backslashes to seperating names in directory. The result of the pwd that is seperated by slashes is called a path. The home directory is the top-level directory(has all the user directories inside it)
+	</p>
+	<h3>Options</h3>
+	<p>
+		Some commands have extra option that enable certain functions to be added. For example <strong>ls -l</strong> is an option to ls. It list out the current directory but with more details.
+	</p>
+	<ul>
+		<li>echo - causes the shell to print a certain message back at us</li>
+		<li>!! - to past in the previous command </li>
+		<li>(up-arrow) - past in previous command</li>
+		<li>x=y - an assignment statment.<strong>NO SPACE</strong></li>
+		<li>echo $x - to see the variable assignment</li>
+		<li>$ - shell variable(some variables are already assigned by the shell without you assigning them.</li>
+		<li>$COLUMNS x $LINES - gives the dementions of the window</li>
+		<li>ls - List the items in the  current directory</li>
+		<li>cd - change directory.</li>
+		<li>.. - parent directory</li>
+		<li>; - allows you to write more than one command on the same line</li>
+		<li>pwd - print the current directory you are in</li>
+		<li>. - current directory</li>
+		<li>~ - home directory</li>
+		<li> -l - a option for the ls command that gives more information</li>
+		<li>*x-  select files that end with x (example .pdf)</li>
+		<li>x* -  select files that start with x</li>
+		<li>*x* - selects files that have x in it</li>
+		<li>mkdir - make directory. You can specify where the directory is created by location/name_of_directory.</li>
+		<li>mv - move. It allows you to move files by stating where the file is from and where it is going. (mv file.type new_spot)</li>
+		<li>curl - allows you to see a url's source code. Can be used to download a file.</li>
+		<li>-L - option that allows you to follow redirects</li>
+		<li>-o - output data to a file.</li>
+		<li> curl - o (save name) - L 'url'- how to download a page with redirects.</li>
+		<li>cat - concatenate(to run several things together) - view full content of a file</li> 
+		<li>less - view content of a file one screen at a time press space or arrow keys to go down. You can press b(or up arrow) for back and / to search. q to quit. </li>
+		<li>rm - removes a file by taking the name of the file.</li>
+		<li>-i - interactive. It an option that gives a promp before executing a command. Takes in a yes or no(y or n)</li>
+		<li>rmdir - removes directories that are empty. Can be used to remove several fils by seperating them with a ,. If there is an unique character such as a space, in the name of the directory, you have to surround the name of the directory with ''</li>
+
+		For more on the shell go 
+		<a href="https://www.bash.academy/">here</a>
+		<a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/">here</a>
+		or
+		<a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html">here</a>
+	</ul>
 </body>
 </html>
