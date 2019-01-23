@@ -4,6 +4,19 @@
 	<title>python_lesson_4</title>
 </head>
 <body>
-	
+	<h3>Substring</h3>
+	<p>
+		A substring is a smaller string that is contained within a larger string. For example "app" is a substring of "apple". The character must occur in order with no gaps in the larger string. Spacing, capitalization and punctuation must match as well. To check if a substring is inside another string, just type " x <strong>in</strong> y" and the result will either be True or False. It can be used to search strings and list. Keep in mind if you type something like [2,3] in [1,2,3,4], it will result in false because it is looking for exactly [2,3] so for it to be true it would have to be [1,[2,3],4]. There is also a <strong>not in</strong> function that does the opposite. T
+	</p>
+	<p>
+		To locate the position of a substring in a string, you can use the <strong>find</strong> method. To use this method just type "string".find("substring") This will return the value of the position where the substring begins. If the substring is not found, the find method will return -1. This works only on strings.
+	</p>
+	<p>
+		To count the amount of substrings in a strings, you can use the <strong>count</strong> method. To use count, simply type string.count(substring). This will return the amount of times you can find substring in string. If you use .count on a list, it will return the amount of times you can find the item on the list, but not if its in another list. For example, [1,2,1,3].count(1) will return 2 and [1,[1,2],3].count([1,2]) will return 1 but [1,2,1,3].count([1,2]) will return 0.
+	</p>
+	<h3>Joining</h3>
+	<p>
+		If we wanted to put a list of strings together in a single string, we can use the <strong>join</strong> method. The fuction will a string and a list and put the items in the list together seperated by the string. For example, if we type " ".join["hi", "there!"] it will result in "hi" + " " + "there!"". Join also works with variables. If you don't want anything between the string on the list you can simply put "". This only works on strings. If you write '-'.join("cat"), the result will be 'c-a-t'
+	</p>
 </body>
 </html>
