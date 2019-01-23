@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>python_lesson_3</title>
+</head>
+<body>
+	<a href="C:/Users/orson/Documents/GitHub/Udacity/homepage.html">Homepage</a>
+	<a href="python_lesson_2.html"> Previous Page</a> <a href="python_lesson_4.html">Next Page</a>
+	<h3>Input</h3>
+	<p>
+		The two commands <strong>input</strong> and <strong>print</strong> are what is known as a built-in function; therefore, you do not need to define these functions, they came predefined. 
+		<br>
+		Input() is a function that pauses the program to gain an input before returning that input, anything put in the () Get's displayed(such as" "what is your name") <strong>Input always turns everything to a string.</strong>
+		<br>
+		Print allows you to return text, integers, or arithmetic expression. If you surround anything with "" with the print function, it will assume its a string and return exactly what's in the "". Print can take in more than one argument but they must be seperated by a , and will be printed with a space between them
+	</p>
+	<h3>Interactive mode</h3>
+	<p>
+		Interactive mode aka the interpreter allows you mess around small bits of code of python. To activate it, just type winpty python into Bash, the result will be a line that starts with >>>. You cannot save anything you run in interactive mode. To quit, hit ctrl z or type exit(). You can add compound statement in the interpreter, but you have to indent each line manually(4 spaces or tab) and only write one command at a time. To finish the compound statement just hit enter. When in interactive mode, return appear unlike in your text editor
+	</p>
+
+	<h3>Type Error</h3>
+	<p>
+		Type error is a common accurance when using the input function. As stated earlier, input functions always return a string; so even if you receive a number for the input, it will not register as a integer but will be treated like a string. To avoid this it is best to use the <strong> int function(int())</strong>. The int function takes in a string and converts it into an integer.
+		<br>
+		<strong>traceback</strong> is when a problem occur in a piece of code and the code traces back to where the problem might come from. For example, when you run your code, you may define something on line 2 but you don't use that code until line 5. This will result in the code first saying they found a problem on line 5 but then identifies that the problem is from the function on line 2.
+	</p>
+	<h3>Importing</h3>
+	<p>
+		Anytime you want to use something that is not directly built into python, you have to import the modules. These are actually pieces of code stored away in your computer when you installed python, and you can find it if you dig around in your files. You can write your own module as well. To use a module simply save the program in the same directory and import it in a different file(remember when you import you don't write <strong>.py</strong>) When calling methods from modules, it must always include the name of the module, a dot, and the function we want to use. This is known as <strong>dot notation,</strong> more specifically, the period is used to say where something is located.<em> For example chance.die_roll() calls the die_roll() function which is in chance.</em>
+	</p>
+	<h3>Variables vs Literals</h3>
+	<p>
+		In a variable, the <strong>variable name</strong> is also known as an <strong>identifier</strong>, normally we say that a variable name x is <strong>bound</strong> to a piece of data(like the turtle.) A <strong>literal</strong> is anything that python interprets literally, this mean that literal cannot ever be anything different from what they are. For example the string "yummy" and any number is literal. It means that "yummy" cannot refer to anything else. This means that you do not have to attach a varaible for python to be able to use it; likewise, you cannot assign anything to a literal.
+	</p>
+	<h3>Complex string</h3>
+	<p>
+		If you are using a string that has a quote in it, you can use both <strong>""</strong> and <strong>''</strong>. If you want a like break in a string, you can type <strong>\n</strong> where you would want the line break. If you need an ' like in the word don't, you can use the character <strong>\</strong> to avoid syntax problem with quotes, this is because \ is a <strong>escape character</strong>. Escape characters tell python that it should interprete  whatever comes after the character in a different way. Another way to avoid syntax errors related to quotes is to start it with <strong>"""</strong>, this tells python that the string will not end until the next set of """ and that when we hit enter, it means a new line(this displays ...). 
+	</p>
+	<h3>Length</h3>
+	<p>
+		<strong>len</strong> stand for length and when used like len("word") it will return the number of characters in that string or list, it does not count the quotation mark. If the length function receives ""(<strong>an empty string</strong>) it will return 0. Keep in mind the length function does count spaces, punctuation, and line break. The length function also only counts each item on a list as 1, not the length of the string that the list is referring to. For example, len["red", "blue"] would result in the answer 2. It also cannot take the length of an integer. Emoji and characters from other langauges can also be counted with the length function(similar to a string)
+	</p>
+	<h3>Looping over things</h3>
+	<p>
+		A few lesson back, we mention that you can loop over a list like this:
+		<br>
+		for item in [1,2,3,4]:
+		<br>
+			print item
+		<br>
+		If we were to print this, the for loop would continue running the same set of commands until all of items on the list have been used(in this case, 4 times.) Similarly, you can also use a string in a for loop, which would result in every character of the string result in a loop. For example if we passed "hello!" into the for loop, it would loop for every character in "hello!"(6 loops)
+	</p>
+	<h3>Counting things</h3>
+	<p>
+		When working with operators, the key thing to keep in mind is that <strong>the code on the right side of the operator runs first</strong>. For example:
+		<br>
+		n = 1
+		<br>
+		n = n + 1
+		<br>
+		If you check the value of n after running this code, n now evaluates to 2.
+	</p>
+	<h3>Indexing</h3>
+	<p>
+		The values inside a string are the characters, this is what allows us to pass in strings in for loops(and also why they appear on seperate lines rather than altogether.) If we want to access individual character in the string directly, we can use the <strong>subscript(or indexing or position) operator</strong>. This is written with square brackets and a number in between [2] like this. For example if we want to access the first character of the string "hello", we'd write it at "hello"[0]. This evaluates to the first letter of the string, h. Indexing always starts from 0 and is referred to as item number zero. Indexing also works list. Indexing also works with negative numbers, so "word"[-1] refers to "d" and "word"[-2] refers to "r"
+	</p>
+	<h3>Range Function, Revisited</h3>
+	<p>
+		Remember that the range function goes up to the number you requested, but not including it. So range(4) will give you every number between 0-3 but not 4, this is known as an exclusive range. The range function can actually take up to three arguments, if you have two arguments range(x,y), you get every number starting from x to y excluding y(stop before y). If you pass three arguments(x,y,z), you get every number from x to y; however, you count up by z(step size)
+	</p>
+	<h3>Length and Indexing</h3>
+	<p>Both the length function and the indexing function can be used together. This allows us to gain the same sequence of number that is the same as the index numbers for the string. This allows us to loop over the index numbers of a string. This may not seem useful now, but it will come in handy later(to be continued...)
+	</p>
+
+	<h3>More Errors</h3>
+	<p>
+		When you are working with BASH or any command shell, it tends to give you more information about your error than you've seen so far in this course. For example, if you have a syntax error, the command line will tell you which file the error came from(if in the interpreter, it will say stdin which mean the code you entered) as well as pointing ant the potential error. With name error and type errors, they use traceback to identify where the code ran into a problem and backtrace the error back to the line where there is a problem. One possible new error you might see is with index(<strong>index error</strong>) is the "string index out of range" message. This means that the index you are trying to refer to is not nonexistant.
+	</p>
+	<h3>Slicing</h3>
+	<p>
+		A slice is a piece of a string starting from one position and extending to another. It is written similarly to a normal indexing function with the addition of a <strong>:</strong>  Like indexing, slice only goes up to but doesn't include the last number. This is known as <strong>slicing.</strong> Slicing can be used in a similar structure to indexing [x:y] or can be used as either [x:](everything after x) or [:x](everything before x). Slicing will <strong>NEVER CAUSE INDEXERROR</strong>, it will do whatever it can.
+	</p>
+	<h3>Concatenation</h3>
+	<p>
+		<strong>Concatenation</strong> is the process of combining two strings together by using the + operator. The + operator has two functions that switches depending on if it is working with integers or with strings. When paired with strings, python interprets the + as the concatenation operator and will stick the two strings together. You can only use one or the other at a time, not both. So if you tried "apple" + 2, you'd get an error. Concatenation goes by order so if you concatenate "apple" + "pie" you'd get "applepie"
+	</p>
+	<h3>f-string</h3>
+	<p>
+		<strong>f-strings</strong> are any string literal with an f before the quotation marks(f stands for formating.) This allows us to easily replace variables in {}(curly braces) with their value(integer or string). With f-string, you have options in how the value of the variable is inserted. For instance, if you have a long number, like pi, and assign it to a variable, by using {pi_varaible:.6} you limit the amount of significant digits. You can recognize these options by looking for what follows the <strong>:</strong>
+	</p>
+	<h3>String to numbers and reverse</h3>
+	<p>
+		Sometimes, when you are using the input function, you want a integer instead of a string. To turn a string into a integer, use the <strong>int function</strong>;however, this only works with whole numbers. If you want to use decimals, use the <strong>float function</strong> instead. If you want to turn an integer into a string, use the <strong>str function</strong>.
+	</p>
+	<h3>Methods on strings</h3>
+	<p>
+		Since checking to see if a string start with a certain another string is pretty common in python, it is built into python; more specifically its a built-in method like turtle. To use it, follow this template. There is also a endswith method, its the same format as the startswith method
+		<br>
+		"string".startswith("str")
+		"string".endswith("str")
+		<br>
+		Statements which return True of False are known as <strong>indicate </strong> some other examples include: isdigit, islower, and isspace. 
+		For more method you can use on strings, check out this <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">link</a>
+	</p>
+	<h3>Boolean Values</h3>
+	<p>
+		Boolean values like True and False have their own operators <strong>and</strong>, <strong>or</strong>, and <strong>not</strong>. These are used when you want to set specific conditions such as 2 == 2 and 2 < 5.
+	</p>
+	<h3>Operations on lists</h3>
+	<p>
+		Strings and list are both <strong>sequence types</strong>, this means that they both type of data that represent a <strong>sequence of values.</strong> It is worth noting that indexing and slicing operator and len gunction work on all sequence types. Keep in mind that each list item counts only as 1 and doesn't include the actual content of the list.
+	</p>
+	<h3>List methods</h3>
+	<p>
+		Like strings, list have a lot of methods. Here are a few:
+		<ul>
+			<li>.<strong>append()</strong> - adds 1 item to the end of a list </li>
+			<li><strong>.extend()</strong> - if a string, divides the character of the string and adds them to the end of the list. if a list, adds the items of the  given list to the end of your list </li>
+			<li>.reverse() - reverses the order of the list.</li>
+			<li>.sort() - puts the list items in alphabetical/numerical order</li>
+		</ul>
+	</p>
+	<h3>Mutable vs Immutable</h3>
+	<p>
+		Mutable is something that is something that you can change, while immutable is something that cannot be changed. A list is mutable because you can change the content of the list with the commands listed above. String are immutable because to can't actually change the content of the string while the program is running, you can only change what the variable is assign to.
+	</p>
+	<h3>Augmented Assignments</h3>
+	<p>
+		Earlier, we talked about changing and updating the value of an assignment such as n = n + 1, there is a another way to do the same thing, known as an <strong>augmented assignment.</strong> Augmented assignments look like this n+= 1. Augmented assignments are not only shorter, but also tend to prevent some errors.
+	</p>
+	<h3>While Loop</h3>
+	<p>
+		A <strong>while loop</strong> repeat a section of code until a certain condition is true. It can use boolean expressions or conditions. If you get into an infinite loop, use the command ctrl + c to escape. If you want to escape a infinite loop you set up yourself, inplement a <strong>break</strong>. A break statement will always skip to the end of the innermost loop
+		<br>
+		A linear search, you start at the beginning of a sequence and look at each item in the sequence until you find the one that matches what you are looking for.
+	</p>
+
+	<a href="python_lesson_2.html"> Previous Page</a> <a href="python_lesson_4.html">Next Page</a>
+</body>
+</html>
