@@ -41,5 +41,30 @@
 
 		</ul>
 	</p>
+	<h3>Files with python</h3>
+	<p>
+		A file can contain text or other data, so how does it vary from a string or variable in python. A file is in <strong>persistent storage</strong>, meaning it is piece of memory stored on the pc unless erased. Variable and strings are ephemeral, only lasting as long as the program is still running. A file can be used my multiple programs, where as variables are stuck to a single program.
+	</p>
+	<h3>OS module</h3>
+	<p>
+		The <strong>os</strong> module allows the user to implement operating system dependent functionality to their code. Here are some useful function you will use from the os module.
+		<ul>
+			<li><strong>os.lisdir()</strong> - gives a list of file names in a directory. Take in the path as the argument</li>
+			<li><strong>os.mkdir()</strong> - creats a directory. Usese the argument as the directory name</li>
+			<li><strong>os.rename()</strong> - renames a file(by taking in the full path of the file and replacing it with the second argument) can be used to move files as well.</li>
+		</ul>
+	</p>
+	<h3>Relative paths and current working directory</h3>
+	<p>
+		Like when you were learning about how to use the command line, python also has a current working directory. It basically means the exact same thing. When trying to move files, you should keep in mind what directory you are currently in, and where the directory you want to move the file is. Remember to make use of relative paths and absolute paths when needed. Here are some useful functions:
+		<ul>
+			<li><strong>os.getcwd()</strong> - gives you the current working directory</li>
+			<li><strong>os.chdir()</strong> - allows you to change directory</li>
+		</ul>
+	<h3>os functions and shell commands</h3>
+	<p>
+		One important thing to keep in mind when using os functions is that the directories are displayed differently between windows, mac, and linex. One way to make sure you are writing <strong>portable code</strong>- code that works on all systems, is to use the fuction os.path.join. This will append the strings differently depending on the operating system and allow the code to be used on all systems.
+	</p>
+	<h3></h3>
 </body>
 </html>
