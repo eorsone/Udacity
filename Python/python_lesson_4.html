@@ -18,5 +18,28 @@
 	<p>
 		If we wanted to put a list of strings together in a single string, we can use the <strong>join</strong> method. The fuction will a string and a list and put the items in the list together seperated by the string. For example, if we type " ".join["hi", "there!"] it will result in "hi" + " " + "there!"". Join also works with variables. If you don't want anything between the string on the list you can simply put "". This only works on strings. If you write '-'.join("cat"), the result will be 'c-a-t'
 	</p>
+
+	<h3>Pycodestyle</h3>
+
+	<p>
+		the command pycodestyle is a tool you can use to check your python code to see if it matches the python style guide. To use this, simply type 'pycodestyle' followed by 'your_program.py'. This will be followed by a message that looks like 'your_program.py:3:1' followed by an explanation. The first number represents the line which the mistake was found. If there are no problems, it won't print anything at all.
+	</p>
+	<h3>Multi-line </h3>
+	<p>
+		Sometimes a string will extend off-screen, making the code harder to read. To prevent this while also getting the same results, you should include a "+ \" right before where you would normally hit enter. An alternative method would be to surround the string with ()
+	</p>
+	<p>
+		When trying to avoid EOL character error, one way is the enter a \ before hitting enter, this is known as a <strong>explicit line joining</strong>. Another way to join line is through <strong>implicit line-joining</strong>, this is anything inside parentheses (). When inside () python will treat the line as if it was a single long line, but the spacing will remain. Python automatically concatenates(+) any adjacent string literals, even without the +. For example, if you type "foo" + "bar" you get foobar, but also if you type "foo""bar" it will also return foobar
+	</p>
+	<h3>Writing Breakfast bot</h3>
+	<p>
+		Here are some random notes when you are working on the breakfast bot:
+		<ul>
+			<li>If you type \n before closing the quotes while using the input function, it will print the written input on the next line.</li>
+			<li>If you use the string method .lower() it will turn the string its attached to, string.lower, into all lower case letters</li>
+			<li>To put a pause in your program for a set period of time, use the time modules and the sleep function it should look like time.sleep(2)</li>
+
+		</ul>
+	</p>
 </body>
 </html>
