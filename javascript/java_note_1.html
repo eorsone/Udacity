@@ -1,0 +1,152 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascriptnote</title>
+  </head>
+  <body>
+    <h3>Javascript Console</h3>
+    <p>
+      To view the Javascript console, right click and hit inspect. After
+      inspecting, go to the Console tab. You can also use Ctrl + Shift + J.
+      You can enter strings into the console like "Bob". If you use
+      <strong>alert("string")</strong>, you can make a pop up with text. The Javascript
+      console, like the python console, is convient when you are using short
+      code, but longer code, for the same reasons as python, will become
+      tedious. Text editors are recommended, but there are other ways.
+    </p>
+    <p>
+      The console is a like a sandbox, it is a place to try code without
+      any risk or consequences. You can use it to debug or test code. If you
+      want to display content in the console, use <strong>console.log</strong>.
+      This allows you to run code and print strings in the console.
+    </p>
+
+    <h3>Data types</h3>
+    <p>
+      Similar to python, Java uses certain datatypes that help identify work
+      with different information.
+    </p>
+
+    <h3>Numbers</h3>
+    <p>
+
+          To define a number, all you have to do is write the number. It can be
+          positive, negative, or even a decimal. With these values, you can
+          do operations such as 1 + 1. You can also compare number, by using
+          &lt;&gt;&lt;= &gt= != and == (these return boolean values).
+    </p>
+    <h3>Comments</h3>
+    <p>
+        To comment things out, it can be anything after a // or anything between
+        /*... /*
+    </p>
+    <h3>String</h3>
+    <p>
+      Strings are indicated by text written between "" or ''. In javascript you
+      can concatenate strings together like "hi"  + " friend." keep in mind, you
+      have to include the space in the quotes otherwise it will look likethis.
+      In javascript, you can concatenate strings and integers, If there is an
+      operation, it will give you the result of the operation, "mob" + 10*10
+      will return mob100. This unique feature is known as implicit type
+      coercion.
+    </p>
+    <h3>Variables</h3>
+    <p>
+      Variables are used to store data. They can store any data into a varaible.
+      To create a variable, type <strong>var variableName = value;</strong>. In
+      javascript, you write variable name with the first letter of the first
+      word in lowercase and the next words start with uppercase. This is known
+      as camelCase. itLooksLikeThis. Using camelCase is not required, but it
+      is considered the normal practice when working in javascript.
+    </p>
+    <h3>String Indexing</h3>
+    <p>
+      Strings can be index to return a specific letter in the string. To index
+      a string, type <strong>"string"[number]</strong>. This will return the
+      number located at the corresponding positon. Keep in mind that index start
+      from 0 so "string"[0] will return "s". Indexing also works on variables.
+      Empty spaces in a string also count as a position on index.
+    </p>
+    <h3>Escape Character</h3>
+    <p>
+      In javascript, to avoid syntax errors in strings that have quotes, use the
+      <strong>escape character \</strong> before the quote. The escape character
+      tells javascript to ignore any sort of special meaning behind a character
+      and use it literally. Some common special character are: \\ \" \'
+      \n(newline) \t(tab)
+    </p>
+
+    <h3>Comparing Strings</h3>
+    <p>
+      You can use the == and != operator to compare strings. For example,
+      "hi" == "hi". Keep in mind, by default, the text has to be exactly the
+      same to return the value True. One thing to keep in mind, if you are
+      comparing string with &lt; &gt;, it will return True or False based on the
+      letters ASCII table code. For more on this go <a href=
+      "http://www.ascii-code.com"> here</a>
+    </p>
+    <h3>Null, Undefined, and NaN</h3>
+    <p>
+      <strong>Null</strong> and <strong>Undefined</strong> are two values that
+      seem very similar at first, but are different in what they actually
+      do. Null refers to a variable that has no value, like None, it purposely
+      return nothing, or null. Undefined means that there is no value assigned
+      to it. Null looks like var x = null; undefined looks like var x;. NaN
+      stands for Not-a-number and often appears when there is an error with
+      number operation. For example, Nan might appear if you try to divide a
+      string by a number or if you try to calculate something that is not
+      possible (like square root of a negative number.)
+    </p>
+
+    <h3>Equlity</h3>
+    <p>
+      Javascript is interesting in the way it treats number and strings. In
+      python, you know that strings and integers cannot be used together; but
+      with javascript, it is different. '1' == 1 is True and 0 == false is True.
+      This is because javascript is a <strong>loosely typed language</strong>.
+      This means that you do not have to specify data types in javascript,
+      it will automatically convert data into the appropriate data type. This is
+      why "julia" + 1 is "julia1". Programming languages like python, that types
+      need to be specified, are known as <strong>strongly typed languages</strong>.
+      It is considered bad practice to compare values for equality with == and !=
+      because they convert value in way you don't want. If you want strict
+      equality, type an extra = instead of == or != it should be === and !==
+    </p>
+
+    <h3>Semicolons</h3>
+    <p>
+      In Javascript, it is possible to write more than one statement on a single
+      line. This is due to the statements in javascript ending in <strong>;
+      </strong>. If this isn't included, you will get a syntaxerror. Some errors
+      can occur if you don't include the semicolon at the end of the line, so it
+      is best to include it at all time.
+    </p>
+
+    <h3>If else statements</h3>
+    <p>
+      An if else statements allows you to print out a certain piece of code if
+      a certain condition is met. They look like this:
+    </p>
+    <br>
+    <img src = "if_statement.png" alt = "if_statement">
+    <br>
+    <p>
+      Keep in mind that inside an if statement, the value is always converted
+      to true or false. If you want more than two conditions, you can add
+      another with else if.
+    </p>
+
+    <h3>Logical Operators</h3>
+    <p>
+      If you want an and statement in javascript, you use the && character
+      between the two conditions. x === "x" && y === "y". These are logical
+      operators and they boolean values. The <strong>||</strong> characters are
+      used for or statements. And ! is used for not statement. Look at the
+      diagram below.
+      <br>
+      <img src ="logical_operators.png" alt = "logical operators image."
+    </p>
+
+  </body>
+</html>

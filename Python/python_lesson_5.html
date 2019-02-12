@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>python_note_5</title>
+</head>
+<body>
+<h3>Opening, closing, and reading file</h3>
+<p>
+	To open and read a text file in python use the command open and assign
+	<strong>open(filename)</strong> to a variable. Once you have the file open use
+	the command <strong>.read()</strong> to return the content of the text file.
+	When you are done with a text file, you want to close it to make sure that you
+	don't hit the limit of open file of your computer while running the program.
+	To close a file, type the file name followed by <strong>.close()</strong>.
+	Keep in mind if you close a file, you can't read from that file.
+	To avoid complication when using the content of the file, you can use the
+	compound statment <strong>with open("textfilename") as variable:</strong>
+	followed by the command you want to run before closing the file.
+</p>
+<h3>Removing punctuations from strings</h3>
+<p>
+	Sometimes when you are searching for a string, a punctuation gets in the way
+	of the program recognizing "pie!" being the same thing as "pie". To prevent
+	this, use the <strong>.strip()</strong> method on strings. This will remove a
+	specific character if it is found at the beginning or end.
+</p>
+<h3>Writing output to a file</h3>
+<p>
+	When you are writing a program, you want it to cause changes to certain
+	strings. One way to do this is to pull the string from a text file and then
+	<strong>write to the file</strong> The steps for writing to a file is as
+	follow:
+	<ul>
+		<li>Open the file in write mode</li>
+		<li>Use the write method to write to the file</li>
+		<li>Close the file.</li>
+	</ul>
+	Write mode is an addition feature of the open function. By default, when you
+	use the open function, it is in a <strong>read only mode</strong>. To active
+	<strong>write mode</strong>, add the additional argument <strong>"w"</strong>.
+	Bear in mind that when you are using rite mode, you are replace the content of
+	the file, there is no undo. If; however, you use the open method with a file
+	name that doens't exist, it will create a new file. To use the write method,
+	just like file_variable.write("string"). Keep in mind, the write method only
+	works with strings.
+</p>
+<h3>Web API</h3>
+<p>
+	API stands for <strong>Application Programming Interface</strong> which means
+	that the doe interacts with some other code or application. An examples of API
+	are the turtle module. API can also refer to code which isn't built into
+	python, but also programs that aren't running on your computer. Using web API
+	can potentially cause some problems due to web servers being down or a
+	disconnection from the internet.
+</p>
+<h3>Getting the weather</h3>
+<p>
+	When typing using urls in python or the shell, it is important to remember
+	that having spaces in url names is not safe. In a browser, by default, this is
+	normally automatically change to %20 where the space is, but in python or the
+	shell, you'll have to write the %20 yourself.
+</p>
+<h3>Request module</h3>
+<p>
+	When you want to use Web API, you need to be able to make request on the web.
+	You can make request by downloading the request module from this <a href="
+	http://docs.python-requests.org/en/master/user/install/#install">link</a>
+	To use the function <strong>get</strong> which takes in a string(the url. It
+	must include either http or https) and returns &lt;Response [200]&gt; if link
+	is valid, otherwise it will return &lt;Response [404]&gt;(as in error 404).
+	Keep in mind that response[200] isn't literly what the function returns, but
+	to see and interact with the response from the server, assign request.get() to
+	a variable. Side note, the number 200 in html refers to if the request has
+	been completed properly. To view the contents of the return, use the variable
+	you assigned request.get() to and follow it by <strong>.text</strong>.
+</p>
+<h3>Problems with API</h3>
+<p>
+	Programs that work with web API's are catagorized as <strong>non-deterministic
+	</strong>, as in, they can do something different each time. In truth, when
+	using an API, the desired result might be different due to internet problems,
+	or the server being down. Programs you write will need to be able to handle
+	the possibiility of the networking request failing. IF the request was sent,
+	but there was an error on the server, the status code function .status_code
+	will return 404 and a traceback. If there is a problem with your internet, it
+	will result in a traceback.
+</p>
+<h3>Try and exception</h3>
+<p>
+	Error messages such as NameError, TypeError, OSError, and ZeroDivisionError
+	are actually special values in python known as an <strong>exception</strong>.
+	When an an exception occurs, it is known as <strong>raising an exception</strong>
+	and it just signals that an error has occurred. An exception is a problem that
+	is detected when the code is running. By default, when an exception occurs,
+	python exits the program and displays a traceback. To change what occurs when
+	python finds an exception, is to use the <strong>try-except</strong> statement.
+	A try except statement takes a command and tries to run it, it will do this
+	normally <strong>except</strong> when a certain error occurs, then it will
+	do a listed command. It is similar to an if statement. The only type of Error
+	that cannot be used in a try statement is syntax errors.
+	 A try statement looks like this:
+	<br>
+	try:
+	<br>
+		print(x/y)
+		<br>
+	except ZeroDivisionError:
+	<br>
+		print (z)
+	<br>
+	When using the requests module, and a connection error has occured, the requests
+	module has an exception for when you have trouble connecting which is:
+	<strong>requests.exceoptions.ConnectionError</strong>, this exception can be
+	be paired with an if statment.
+</p>
+<h3>JSON</h3>
+<p>
+	When you use the .text function on the web API for weather, it will return a long set of
+	text. This is known as <strong>JSON</strong> which stands for JavaScript object
+	Notation. JSON is not a program but rather a piece of data. It is used to send
+	nested data strctures that contain strings, numbers, list, and key-value pairs.
+	For more on JSON, check this <a href="https://www.json.org/">link</a>
+</p>
+<h3>Dictionaries</h3>
+<p>
+	Another useful type of data strcture we can use(besides list), is a <strong>
+	dictionary</strong>. Dictionaries can contain multiple items like a list;
+	however, they do not use index numbers to obtain the items. To create an empty
+	dictionary, just type x = {}. If you want content in the dictionary, type:
+	x = <strong>"key": "value"</strong>; if you have more than one entry, seperate
+	them with a ",". If you want to look up an entry from a dictionary, use the
+	x["key"] with the key and it will return whatever is assigned the value. If
+	you want to change a value, type x["key"] = value. To add to a value, type
+	x["key"] += value. To add a new key and a value to an existing dictionary,
+	type x["newkey"] = "new_value". If you try to use a key that isn't in a
+	dictionary, it will result in a <strong>KeyError</strong>. The <strong>in
+	</strong> operator works with dictionaries. x in d(dictionary) will result in
+	the program searching for the key "x" and will return true if it is a valid
+	lookup. If you write <strong>del x['key']</strong>, it will remove the key and its values from
+	the dictionary(x)
+</p>
+<h3>Looping over dictionaries</h3>
+<p>
+	When using a for loop(for x in y) with a dictionary, <strong>x becomes the key by
+	default</strong>. You can also get the same result by typing <strong>for x in
+	y.keys()</strong>.To obtain the values, you can type <strong>for x in
+	y.values().</strong> If you want both the key and the value, type <strong>
+	for x in y.items()</strong> If you want to assign the key and value to
+	different variables, type <strong>for key, value, in favorites.items()</strong>
+	When you print out full dictionary entries, it looks like (x,y). This is known
+	as <strong>tuple</strong> Tuples are sequences that are immutable
+</p>
+<h3>Nesting dictionary</h3>
+<p>
+	Keys can only nest <strong>integer and strings</strong>. Values, on the other
+	hand can hold <strong>integers, list, strings, and dictionaries</strong>. Lists
+	can nest dictionaries, you can also do more complex commands sucn as
+	d["x"[0]"y"], this will return the values in key "x" and select the first item
+	on the list with index[0] and return the values of the inner key 'y'
+</p>
+<h2>Looping over nested strcture</h2>
+<p>
+	If you are looping over a list, keep in mind that if you have a list nested in
+	the other list, you can use for x in y[0] to specifically target the first
+	list. Likewise, you can also use for x in y["dictionary_name"].keys(or values)
+	to list over specific dictionaries. You can continuously index through
+	layers of nexting by continuously using the index operator back to back.
+</p>
+<h3>Magical Dictionary Transformation</h3>
+<p>
+	When using web API, chances are they are written in JSON. To use this data in
+	python, just add x.json() to the variable that holds the API to turn JSON into
+	a python dictionary.
+</p>
+<h4>Random side note:</h4>
+<p>
+	If you include a \t in your string, it will automatically insert a tab to space
+	the text farther apart.
+</p>
+<h3>Objects and Class</h3>
+<p>
+	Object are things in memory that we can refer to by a name. They also have a
+	specific <strong>type</strong>(str, int, list, boolean). These types specify
+	what we can do with that object. For example we can /(divide) an integer but
+	we cannot divide a string. Another way to refer to type is to refer to it as a
+	<strong>class</strong> (str, int, turtle, etc). A class is a template or blueprint
+	for creating objects. For example, the input function always return an object
+	whose class is a string. To check what class an object is, use the functions
+	<strong>isinstance and type</strong>. Isinstance takes a particular object and
+	checks if it is a certain class or belong to a class and will return a boolean
+	value. Type take an object and will return &lt;class"_"&gt; and the name of
+	the class in the blank. Once an object is created, the class does not change.
+	To create an object with a certain class, just use str() for string, int() for
+	int, turtle.Turtle() for turtle, and so on.(just call it) Side note, boolean
+	value fall in the int class.
+</p>
+<h3>Defining a new class</h3>
+<p>
+	To define a class, just type class followed by the name of the class plus a
+	colon. For example class Dog:. After creating a class, define the function you
+	would like that class to be able to do. Keep in mind that a method is a function
+	written inside of a class so we can use it. Keep in mind that when you have 1
+	argument in a class definition, the class name is automatically inserted as the
+	first argument, normally the first parameter is written as self(most people
+	do it this way.)
+</p>
+<h3>Class Variables and instance-level variables</h3>
+<p>
+	<strong>Class level variable</strong> are variables found in classes. They are
+	created by using assignment statements inside of the class difinition. This is
+	useful when there is information that is common amoung all instances of a class.
+</p>
+<p>
+	When you assign a variable a name, the variable name points to an object, but
+	there is no way to reverse this process. The varaible Fido can point to a
+	object, but theres no way for that object to know that it's variable name is
+	Fido. To allow the object ot refer to the variable, you can use a
+	<strong>Instance level variables</strong>.To use an instance level variable,
+	use an assignment statement to a variable starting with <strong>self.</strong>,
+	this saves information into a single specific object that you called the method
+	on. For example, if you define a function that takes self and a name, to make
+	it an instance level variable, just type self.name = name inside. Now if you
+	type the variable self.name, it will return whatever you assigned to the argument,
+	name. Keep in mind, instance-level variables work the same as regular variables,
+	they are also mutable.
+</p>
+<h3>Initializer(__init__)</h3>
+<p>
+	An <strong>Initializer</strong> is a special way of defining a function that
+	automatically gets run when you create an object with a class. For example, if
+	in our dog program, we wanted the dog to know its name as soon as it was created,
+	we would put the variable self.name = name inside the __init__ function. Keep
+	in mind, this does require that when you use a class, you are required to pass
+	an argument.
+</p>
+<h3>Subclassing and "Is-a" vs "Has-a"</h3>
+<p>
+	<strong>Subclassing(Inheritance)</strong> is when a class shares characteristic
+	with a parent class. For example, if we had a class, dog, that had a speak
+	function, if we make husky a subclass of dog, husky can also use the speak
+	function without having to redefine it. To set up a subclass, type
+	class classname(parentclass)
+</p>
+<p>
+	When determining if something should be a subclass of another, we must consider
+	it's relationship to the original class. The relationship rules we go by is
+	is known as a <strong>"Is-a" vs "Has-a"</strong>. If we want something to be
+	a subclass of another, it should be directly related to it. For example, a
+	Corgi is a type of dog; therefore, we can make a subclass for the Corgi. On the
+	contrast, a dog park has a dog in it, but isn't actually a dog itself; it is a
+	park.
+</p>
+<h3>Super</h3>
+<p>
+	Sometimes when you are importing other modules, it is important to keep in mind
+	that sometimes the original module has a __init__ in it; therefore, if you use
+	another __init__ for a subclass, it will override the original module init. To
+	avoid this use the <strong>super function</strong>. The super function takes
+	the object and connect it to its parents class. In other words, it allows you
+	to access what would have originally been created by the init of the parent
+	module. The super function looks like <strong>super().__init__()</strong>
+</p>
+</body>
+</html>
