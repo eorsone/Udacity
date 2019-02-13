@@ -143,10 +143,35 @@
       between the two conditions. x === "x" && y === "y". These are logical
       operators and they boolean values. The <strong>||</strong> characters are
       used for or statements. And ! is used for not statement. Look at the
-      diagram below.
+      diagram below. You'll notice that if the first expression of an and
+      statement is false, both are false regardless. Likewise in an or statement
+      if the first expression is true, the rest is true regardless of the second.
+      This is known as <strong>short-circuiting</strong> because it
+      describes later events in arguments in a logical expression that are not
+      considered because the first already satisfied the condition.
       <br>
       <img src ="logical_operators.png" alt = "logical operators image."
+      <br>
     </p>
 
+    <h3>Truth and False</h3>
+    <p>
+      There are some values that when evaluates to false all the time when
+      converted. These are the six that exist in javascript:
+      <ul>
+        <li>False</li>
+        <li>null</li>
+        <li>undefined</li>
+        <li>0</li>
+        <li>""</li>
+        <li>NaN</li>
+      </ul>
+      Any other value evaluates to true.
+    </p>
+    <h3>Ternary Operators</h3>
+    <p>
+      A <strong>ternary operator</strong> is a shortcut for writting if else
+      statement. The format looks like this: condition ? (if true) : (if false)
+    </p>
   </body>
 </html>
