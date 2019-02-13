@@ -171,7 +171,31 @@
     <h3>Ternary Operators</h3>
     <p>
       A <strong>ternary operator</strong> is a shortcut for writting if else
-      statement. The format looks like this: condition ? (if true) : (if false)
+      statement. The format looks like this: condition ? (if true) : (if false);
+    </p>
+    <h3>Switch Statements</h3>
+    <p>
+      If you find yourself repeating the statement "else if" in your code, you
+      should probably switch over to a <strong>switch statement</strong>. A
+      switch statement allows you to access different scenerio based on case
+      predefined cases. A switch statment looks like the below code. The words
+      case below is similar to writting if. One thing to keep in mind is that if
+      option is 1, it will print case 1 till the end. To avoid this, use a break
+      statement. At the end of the switch statement, you can include a
+      <strong>default</strong> which will always be run regardless what cases
+      are met.
+      <br>
+      switch (option) {
+        <br>
+        case 1:
+        <br>
+          console.log("You selected option 1.");
+          <br />
+        case 2:
+        <br />
+          console.log("You selected option 2.");
+          <br />
+      }
     </p>
   </body>
 </html>
