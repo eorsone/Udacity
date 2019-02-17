@@ -1,0 +1,136 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>javascriptnote</title>
+  </head>
+  <body>
+    <h3>Loops</h3>
+    <p>
+      To avoid repeating the same code several times, it best to use a loop.
+      Loops will continuously iterate around a piece of code. Loops can be
+      nested.
+      To set up a while loop, type while (condition) {what is being looped}.
+    </p>
+    <p>
+      A for loop is the most common type of loop used in javascript. For loops
+      force you to define the start , end point, and increments
+      of a loop in the for statement. For example for
+      (var x = 1; x < 10; x++) This set the variable and starting point,
+      continues while x < 10, and increase x by 1 each time through the loop.
+      Note that x++ is a different way of writting x += or x = x + 1;however,
+      there is a difference. If you type x++, it will return the current number
+      and change the value of x by 1. Similarly, ++x will return x + 1. It all
+      depends on what the program needs. You can also use this when subtracting.
+    </p>
+    <h3>Functions</h3>
+    <p>
+      Function is a way of packaging up code and making it more simple use,
+      without the need to consistantly copy and paste long code. A function
+      normally takes in arguments, and return the result of affecting the
+      argument in a certain way. The variable are known as parameters, the
+      actual value of those variables are known as arguments. Return statements
+      are used to make the function return a value. Once defined, you can call a
+      function when you want to use it.
+    </p>
+    <h3>console.log() vs return</h3>
+    <p>
+      You may noticed that when you used console.log() it return whatever is in
+      the () followed by <strong>undefined</strong>. Undefined is what is being
+      return by the console.log() function. More specifically undefined is the
+      result of a function not having any specified value for it to return. This
+      is because a function must always return something. Another way to print
+      messages is to use the word <strong>return</strong>. Returns are used to
+      <strong>stop the execution of a function</strong> and return a value back
+      to the caller. Console.log can print text but it is not a return statement.
+      If a return statement is present, console.log will not return undefined.
+    </p>
+    <h3>Scope</h3>
+    <p>
+      Scope will be at the heart of many programming problem. Scope is the part
+      of a program where a particular identifier(variable or function name)
+      is visible or accessible. In javascript there are two different type of
+      scope, global scope and function scope. If you have an identifier outside
+      of any function, it can be accessed anywhere in the code after it is
+      defined, this is known as global scope. If you have a identifer inside a
+      function, that identifier can be accessed only inside the function and
+      any other nested function. This is known as function scope. Variables
+      in function scope only affect the value inside that scope, if x = 1 and
+      in a function you multiply x by 3; outside that function, x is still 1.
+    </p>
+    <h3>Hoisting</h3>
+    <p>
+      Hoisting is a unique feature to javascript that allows all function and
+      variables to be declared before the code even runs in the current scope.
+      This makes it so a function can be used before it is written. In the case
+      of variables, it is actually a bad thing to use hoisting, due to the fact
+      that the variable is defined, but the assignment with that variable
+      isn't hoisted with the variable. This is why, in the case of variables,
+      you want to define them on the top of the current scope. It is common
+      practice to avoid using hoisting, and stick to the top-to-bottom standard
+      way of writting code.
+    </p>
+    <h3>Function Expression</h3>
+    <p>
+      A <strong>function expression</strong> is a function stored in a variable.
+      A function expression looks like var x = function(parameter){}. If you
+      want to use the function expression, just type the variable name followed
+      by the argument you want to pass(if any). Notice how the function has
+      no name, this is known as a <strong>annonymous function</strong>.
+      Annonymous functions can be named, but you would still have to use the
+      variable name, not the function name. Function expression, unlike function
+      declaration(the noraml way) are not affected by hoisting.
+    </p>
+    <p>
+      With function expressions, you are able to pass functions into other
+      functions. This is known as a <strong>callback</strong>. If you skip the
+      assignment, you can still perform a callback. It looks like
+      movies(function nameOfFunction(parameter){command;}) There is an example
+      below. The function below returns the string "My favorite movie is
+      Finding Nemo."
+      <br />
+      <img src = "inline.png" alt = "inline example" />
+      <br />
+      You might be wondering why we would want to use an anonymous inline
+      function. Anonymous inline function expressions are often used with
+      function callback that aren't going to be reused.
+    </p>
+    <h3>Arrays</h3>
+    <p>
+      <strong>Arrays</strong> are a data strcture that can hold multiple data
+      values, similar to a list. Array, like list in python, start from 0. To
+      make an array just create a variable equal to []. var x = [] Eat element
+      in an array needs to be seperated with a comma. Array can basically hold
+      any value. Each item in an array is known as an element. You can refer
+      to different items in an array using indexing. Keep in mind, if you try
+      to access an element at an index that doesn't exist, undefined will be
+      returned. Additionally, you can change the value of an element in the
+      array by typing index[0] = newvalue;.
+    </p>
+    <p>
+      Arrays have a number of <strong>properties and methods</strong>.
+      Properties are like special pieces of information about a data structure.
+      The .length property is one that we have used before on strings. If used
+      if arrays, it will return the amount of elements in a array. A method is
+      like a special predefined function that data structures can call. Some
+      examples are:
+      <ul>
+        <li>Reverse - reverses the order of the elements in an array</li>
+        <li>Sort - sorts elements in an array</li>
+        <li>Push & Pop - two methods that allow us to add and remove elements
+        from an array. Push() adds to the end of a array, while pop removes
+        elements from the end.
+        </li>
+        <li>Splice - splice() can add removes an element from anywhere in the
+        array by taking in position of what you want to remove, and the position
+        where you want something to be moved to, followed by the new elements.
+        The first argument is the starting index, the second is the number of
+        elements you want to remove, the third is what you want to add.
+        </li>
+        <li>shift()- removes the first item in a list.</li>
+        <li>join()- changes an array into a string.</li>
+      </ul>
+
+    </p>
+  </body>
+</html>
