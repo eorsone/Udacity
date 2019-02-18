@@ -130,8 +130,8 @@
         <li>.shift()- removes the first item in a list.</li>
         <li>.join()- changes an array into a string.</li>
         <li>.forEach() - Used to loop over each elements in an array without an
-        index. The forEach function can take a function with up to three
-        parameter.(element, index, array)
+        index. The forEach function can take a function as a parameter
+        and applies that function onto each item in an array.
         </li>
         <li>
           .map(func) - works on callbacks function that can perform an
@@ -160,12 +160,29 @@
       while "blue" is the value. A function that is associated with an object(
       is defined inside the object) is known as a method.
     </p>
-    <h3>Primitive Data Types</h3>
+    <h3>Primitive Data Types and Objects.</h3>
     <p>
-      primitive data types are things like strings, numbers, booleans, undefined
-       and null. Objects are data sctrues in javascript that let you store data
-       about a particular thing, and helps keep track of that data by using a
-       "key".
+       primitive data types are things like strings, numbers, booleans, undefined
+       and null. Objects are data structure in javascript that let you store
+       any data about a particular thing, and helps keep track of that data by
+       using a "key". Objects allow you to group information into a meaningful
+       structure. The items in an object are stored in pairs inside curly bracket.
+       For example, {name : "bob",}. It is common to see each value in an object to
+       be placed on its own line. These are similar to dictionaries in python.
+       The values can be any primitive data type, such as strings, booleans,
+       undefined, null, arrays, and even functions. To access the value, you can
+       either type console.log(objectName.keyVariable) or console.log(object["key"])
+    </p>
+    <h3>Naming Conventions</h3>
+    <p>
+      There are some naming convention that you will want to follow to avoid bugs
+      when you are naming objects. Here are a few of them:
+      <ul>
+        <li>Avoid using numbers as the first character of a key(dot notation)</li>
+        <li>Avoid using spaces, dots, in your key name. (dot notation)</li>
+        <li>Use camelCasing to write property names.</li>
+        <li>Although it is ok to use "", sometimes they hide potential errors.</li>
+      </ul>
     </p>
   </body>
 </html>
