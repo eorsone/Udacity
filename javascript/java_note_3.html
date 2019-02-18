@@ -1,0 +1,53 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>What is an event?</h3>
+    <p>
+      An event is like an announcement that envokes a response. One way to view
+      events from a page of html is using the funcion monitorEvents() in the
+      javascript console of chrome. This function takes in an element and
+      returns all the events that are happening on the targetted element. There
+      are two ways to stop it, refreshing the page, or typing unmonitorEvent()
+      into the console.
+    </p>
+    <h3>Responding to events</h3>
+    <p>
+      Going back to html, we stated that elements inherit from nodes, but one
+      thing we didn't mention is that nodes inherit from something known as the
+      <strong>EventTarget Interface</strong>. The EventTarget is "an interface
+      implemented by objects that can receive events and listen to them.
+      Elements, documents, and window are the most common event targets, but
+      other objects can be event targets too. The EventTarget Interface only has
+      three methods:
+      <ul>
+        <li>.addEventListener - allows us to listen to events and respond.</li>
+        <li>.removeEventListener</li>
+        <li>.dispatchEvent()</li>
+      </ul>
+      The addEventListener requires three parameters, a event <strong>target
+      </strong>, the <strong>type</strong> of event ot listen for, and a function
+      to run when an event occurs known as a <strong>listener</strong>. The
+      structure looks like this :
+      <br />
+      &lt;event-target&gt;.addEventListener(&lt;event-to-listen-for&gt;,
+        &lt;function-to-run-when-an-event-happens&gt;);.
+      <br />
+      The event target can be anything on the web. The event-to-listen-for(type)
+      is the event we want to respond to. The
+      function-to-run-when-an-event-happens(listner) is the function to run when
+      event occurs. For more info go <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">
+      here</a>
+    </p>
+    <p>
+      To add javascript to your own file, add the element &lt;script src = "" &gt;
+      &lt;/script&gt; To view all DOM events, go <a href="https://developer.mozilla.org/en-US/docs/Web/Events">
+      here</a>
+    </p>
+
+    <script src="apps.js"></script>
+  </body>
+</html>
