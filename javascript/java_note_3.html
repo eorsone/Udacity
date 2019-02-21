@@ -5,6 +5,191 @@
     <title></title>
   </head>
   <body>
+    <h3>DOM</h3>
+    <p>
+      DOM stands for Document Object Model. It is a tree structure that captures
+      the content and properties of the html and all the relationships between
+      nodes. More specifically, the html is received by the browser, it is then
+      converted to tokens(tokenization) which are then converted to Nodes,
+      which is finally converted to the DOM. Another way to look at the DOM is
+      as a model(representaiton) of the relationship and attributes of the HTML
+      documents. If you type document inside javascript, it return #document.
+      It is a representation of the html document, not the javascript document.
+      Javascript works with html; therefore, the document object is expected to
+      exist and be accessible by the javascript code under the (document) object.
+      For more on DOM, go
+      <a href = "https://www.w3.org/standards/techs/dom#w3c_all">here.</a>
+    </p>
+    <h3>Select Page Elements By ID</h3>
+    <p>
+      Recall that we stated earlier that document can be entered inside javascript
+      which returns #document. The documents is actually a javascript object
+      that has key/value pairs. Some of it is data, some of it is functions
+      (or methods) that provide some type of functinoally. The first DOM method
+      we will be looking at is <strong>.getElementById()</strong>. This take the
+      id as the argument and returns the element that matches the id as well as
+      all of its children. If the Id doesn't exist, the function will return null.
+      You can store the result of .getElementById() into a variable. Keep in
+      mind that ID are unique, therefore, there should only ever be one ID in a
+      html document.
+    </p>
+    <h3>Select Page Elements By Class or Tag</h3>
+    <p>
+      When you want multiple DOM elements, you can use <strong>
+      .getElementsByClassName() or .getElementsByTagName</strong>. Like
+      .getElementByID(), it takes in the class name(or tag name) as the argument
+      and return all elements with that class. Note the "s" in
+      getElementsByClassName and getElementsByTagName, which isn't in
+      getElementByID. One thing to note about getElementsByClassName
+      (and ByTagName) is that what it return looks like an array, but it is
+      actually a <strong>HTML collection</strong>.
+    </p>
+    <h3>Nodes vs nodes</h3>
+    <p>
+      N(Nodes)(interface) is like a blueprint(interface). It has properties(data) and
+      methods(function) properties can be things like "color" or number of "doors".
+      An <strong>interface(node)</strong> tells us the properties and methods that
+      are applied to individual items. n (nodes) are the things that are built
+      with the Nodes(interface/"blueprint"). To see all the method and properties,
+      click <a href = "https://developer.mozilla.org/en-US/docs/Web/API/Node">
+      here</a>
+    </p>
+    <p>
+      Another way to think of a node, is that it is more specific, with its own
+      specific properties and methods.
+    </p>
+    <h3>Element Interface</h3>
+    <p>
+      The Element interface is similar to the Node Interface in the sense that
+      the Element interface is a blueprint for creating elements. One important
+      thing to remember is that the Element Interface is the descendent of the
+      node interface. This means that the Element Interface inherits all of the
+      Node interface's properties and methods. That mean any (e)lements is
+      also a (n)ode.  To see all the method and properties,
+      click <a href = "https://developer.mozilla.org/en-US/docs/Web/API/Element">
+      here</a>
+    </p>
+    <p>
+      In the end, there are several interfaces that we have yet to learn. To see
+      and read up on some more interfaces, look <a href =
+      "https://developer.mozilla.org/en-US/docs/Web/API"> here</a> This page has
+      a useful diagram that tells you which interface inherits from what. Here
+      is an example diagram provided by mozilla below.
+      <br />
+      <img src = "webapi.png"
+      alt = "web api">
+      <br />
+      Some other browsers do not support certain methods you want to use in
+      your console. On Mozilla webpage they tell you which method are supported
+      by which browser. Thankfully, most browsers are aligned to support the
+      offical standards.
+    </p>
+    <h3>QuerySelector</h3>
+    <p>
+      If you want to be able to select elements like you do in CSS, you can use
+      the .querySelector() method. This looks like this
+      document.querySelector("#header"). This will find and return an element
+      with an ID of "header". Keep in mind; however, this method will only return
+      one element, even if there are multiple elements. It will return the first
+      one it finds. If you want to find an element with a specific class, you
+      can type, for example (p.class) where p is the element you are looking for.
+      For more on this method go <a href = "
+      https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">
+      here</a>
+    </p>
+    <p>
+      .querySelectorAll() returns a list of all elements with the certain class
+      or type of element. This list is known as a <strong>NodeList</strong>, not
+      an array. It is a special type of list. If the type of element is a
+      descendent of another class, you type it like this (".article p"), this will
+      return all p elements that are a descendent of the class article.
+      For more on .querySelectorAll(),
+      go <a href = "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">
+      here</a>
+    </p>
+
+    <h3>Updating existing page contents</h3>
+    <p>
+      Because every element inherits from the Element Interface, this means that
+      all elements can use the .innerHTML property, .textContent, and .innerText.
+      <strong>.innerHTML</strong> allows us to get an elements
+      (and its descendants) HTML contentand modify that content. .innerHTML is a
+      property and it returns a string. More specifically, .innerHTML returns
+      the HTML content of a selected element. If we just want the text content,
+      we can use <strong>.textContent</strong>, this will set the text content of
+      an element and its descendence and return the text content of that element.
+      If you want to modify text content, variableName.textContent = "new text".
+      Keep in mind that when you modify text, it can only be return as text, not
+      code. To actually update the element, use .innerHTML, this will actually
+      take written tags and apply the html to it. Lastly, <strong>.innerText
+      </strong> is another way of getting/setting text content, but there is a
+      difference. The .innerText will return the text as it appears on the page,
+      meaning that it has style included.
+    </p>
+    <p>
+      Side note, if you use $0 in javascript console, to store a selected element
+      in the elements tab into a variable.
+    </p>
+
+    <h3>Adding New Page Content</h3>
+    <p>
+      The first new one we will look at is <strong>.createElement('tag')</strong>
+      , this one works on documents. It creates and returns a new element. For
+      more on .createElement(), go
+      <a href = "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">
+      here</a>
+    </p>
+    <p>
+      One thing to note about .createElement() is that it doesn't actually add
+      the new element to the DOM. To add it to the DOM we need to use
+      <strong>.appendChild()</strong>, this will add the element to the page.
+      Keep in mind that the word <strong>append</strong> means to add something
+      at the end of another. .appendChild() works on other elements,<strong>not the
+      document object.</strong> It need to be placed on an existing element. It
+      also will be added to the end of the content of the tag. One last thing,
+      keep in mind that this method is literly <strong>moving</strong> an element
+      from one place to another; therefore, running it twice will result in
+      the element being moved the most recent element.
+      For more on .appendChild(), go
+      <a href = "https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild">
+      here</a>
+    </p>
+    <p>
+      To create a text node, use the <strong>document.createTextNode</strong>
+      method; however, using the .textContent property will provide the same
+      result. It fact, using .textContent is actually faster.
+    </p>
+    <p>
+      .appendChild() is useful, but it only adds things to the end of the selected
+      element. For something more flexible, we can use the <strong>
+      .insertAdjacentHTML()</strong>. This method takes two arguments, location
+      of the HTML, and the text that is going to be inserted. The first argument
+      takes in four different locations <strong>beforebegin, afterbegin,
+      beforeend, and afterend.</strong>. Below is a visual diagram to help explain
+      these locations. For more information, check out
+      <a href = "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">
+      MDN</a>
+      <br />
+      <img src = "locations.png" alt = "locations" />
+      <br />
+    </p>
+
+    <h3>Remove Page Content</h3>
+    <p>
+      To remove child element, use <strong>.removeChild()</strong> method.
+      This is the exact opposite of .appendChild(), it removes the first child.
+      parent-element.removeChild(child-to-remove). Unlike .appendChild(), we
+      aren't limited to where we can place this. Every element has a parent
+      element, so if the parent element isn't clear, we can always use the
+      .parentElement property to access it. So it would like something like
+      (parent-element).parentElement.removeChild(child-to-remove).
+    </p>
+    <p>
+      Alternatively, if we want to cut all the hussle, we can use the .remove()
+      method to remove an element. It would look like this
+      thing-to-remove.remove()
+    </p>
+
     <h3>What is an event?</h3>
     <p>
       An event is like an announcement that envokes a response. One way to view
@@ -28,6 +213,9 @@
         <li>.removeEventListener</li>
         <li>.dispatchEvent()</li>
       </ul>
+    </p>
+    <h3>addEventListener</h3>
+    <p>
       The addEventListener requires three parameters, a event <strong>target
       </strong>, the <strong>type</strong> of event ot listen for, and a function
       to run when an event occurs known as a <strong>listener</strong>. The
@@ -47,7 +235,98 @@
       &lt;/script&gt; To view all DOM events, go <a href="https://developer.mozilla.org/en-US/docs/Web/Events">
       here</a>
     </p>
+    <h3>Remove an Event Listener</h3>
+    <p>
+      One thing to keep in mine when using the .removeEventListener() method is
+      that it requires you to pass the exact same listener function that you
+      passed to .addEventLIstener. The function can't be defined inside the
+      method, it must be defined outside.
+    </p>
+    <h3>More DevTools</h3>
+    <p>
+      The DevTools has an event listner tab, which tell you if there's a event
+      listener for a specific element. You can also check to see if any of the
+      ancesters of the element has a listener.
+    </p>
+    <h3>Event Phases</h3>
+    <p>
+      During the lifecyle of an event, there are three phases:<strong> capture,
+      at target and bubbling</strong>. Most event handlers run during the target
+      phase(like clicking a button.) If you have multiple items and want to have
+      a handler cover every item, by default, if the child item doesn't interpret
+      the event, the event will "bubble" to the parent until something "handles"
+      it or it hit the document. Capturing allowes parent function to intercept
+      an event befrore it reaches a child. Below is a helpful diagram to help
+      understand this concept.
+      <br />
+      <img src = "event_phases.png" alt = "event phases" />
+    </p>
+    <h3>.addEventListener cont.</h3>
+    <p>
+      The .addEventListener actually has three arguments, the third is known as
+      useCapture. By default, when .addEventListener only has two arguments, it
+      uses the bubbling phase. To review, the .addEventListner take three arguments,
+      ("event", function(){}, and useCapture(true or false)). If .addEventListner
+      only has two arguments(or the third argument is set to false),
+      it will run the listener from bottom till top(during bubbling phase);
+      however, if the third arugment is given to .addEventListener, it will run
+      any listeners with the useCapture during the capture phase.
+    </p>
+    <h3>Storing Event Data.</h3>
+    <p>
+      If you add a parameter to the .addEventListener function, it will store
+      the event data to that set parameter. For example,
+      document.addEventListner('click', function(event){console.log(event);})
+      will log the event data to use in the variable event. Since this event was
+      a click, the variable event will return a MouseEvent. One of big reason
+      most web developers use the event object, is to prevent the default action.
+      This allows us to control what occurs, rather than being stuck with a
+      default. To prevent the default use the .preventDefault() menthod on the
+      stored event data.If you want to know more about the event data, go to
+      <a href="https://developer.mozilla.org"> Mozilla</a>
+    </p>
+    <h3>Event Delegation</h3>
+    <p>
+      Sometimes, in an effort to make your code more efficient, you "lose" the
+      ability to access specific items in code, but there is a way aroudn this!
+      It's known as <strong>event delegation</strong>. In reality, event object
+      has a <strong>.target </strong> property which allows us to directly
+      access the element it is attached to. Here is a example provided by Udacity:
+      <br />
+      <img src = "event_delegation_code.png" alt = "event code">
+      <img src = "event_delegation.png" alt = "event delgetation example" />
+      <br />
+      Because we have access to the element, we can access its
+      <strong>.textContent</strong>, which gives us control of the element and
+      its text. We can change almost anything with this.
+    </p>
 
+    <h3>Node types in event delegation</h3>
+    <p>
+        Somtimes, you'll want to listen to a parent element with multiple child
+        elements, with what we know now, it is not possible to distinguish between
+        the two elements. Fortunetly, every element inherits properties from the
+        <strong><a href ="https://developer.mozilla.org/en-US/docs/Web/API/Node"
+        >Node Interface</a></strong>. One of the things it inherits is
+        .nodeName property. This can be used to identify what element we are
+        working with. For example, if the element was a span, nodeName would
+        equal to "SPAN", if it was a p element, it would equal "P". All we
+        need to add now is an if statement.
+    </p>
+    <h3>The DOM is Ready</h3>
+    <p>
+      You may recall that we recommend putting the script element at the bottom
+      of the html document. This is because DOM runs top-to-bottom, therefore,
+      if you run javascript which access elements in the html before there are
+      defined, the result will be a lot of null... therefore causing an error.
+      One way to make sure that the DOM is ready is to look for the event,
+      <strong>"DomContentLoaded"</strong>. If this event occurs, we know that
+      the DOM is ready! We would attach this to the document object. Although
+      this does allow us to put our javascript doc at the header of the page, it
+      is still not recommended. There are instances where you'd want to run
+      javascript doc in the head, but that is if you are running more than one
+      javascript doc and if you really need that code to run ASAP.
+    </p>
     <script src="apps.js"></script>
   </body>
 </html>
