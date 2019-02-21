@@ -20,6 +20,13 @@
       For more on DOM, go
       <a href = "https://www.w3.org/standards/techs/dom#w3c_all">here.</a>
     </p>
+    <p>
+      Side note - you'll need to know the difference between var, let and const
+      which can all be used to define variables. Var is function scope, let is
+      <strong>block scope</strong>(only in {}), and const is also block scoped.
+      The difference between let vs const is that const <strong>cannot be
+      reassigned.</strong>
+    </p>
     <h3>Select Page Elements By ID</h3>
     <p>
       Recall that we stated earlier that document can be entered inside javascript
@@ -188,6 +195,60 @@
       Alternatively, if we want to cut all the hussle, we can use the .remove()
       method to remove an element. It would look like this
       thing-to-remove.remove()
+    </p>
+
+    <h3>Style Page Content</h3>
+    <p>
+      Specification is the means by which a broser decides which CSS property
+      values are the most relevant to an element and, therefore, will be applied.
+      To modify a element's style attribute, you must access the most-specific
+      version of style possible, the element's style attribute. We can access
+      this via the <strong>.style</strong> property. You can only modify one css
+      property at a time using .style. for example, .style.color = "red". For
+      the MDN on style, click <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">
+      here.</a>
+    </p>
+    <p>
+      If we want to set multiple styles, we can use the <strong>.style.cssText</strong>
+      property, which allows us to write like we would to the style sheet. It
+      looks like this. .style.cssText = "color: blue; background-color: orange;"
+      Keep in mind that this overwrites whatever is in the .style attribute.
+    </p>
+    <p>
+      Another way we can style a page is by is to use the <strong>.setAttribute()
+      </strong> method. The documentation for it is located at the same link as
+      the above style. Like the name suggest, you can use this method to mess with
+      more than just style, it can be used to affect <strong>any</strong> attribute.
+      All you need to use is is to type the attribute you want to change followed
+      by the changes. Here is an example:
+      mainHeading.setAttribute('style', 'color: blue; background-color: orange;.
+    </p>
+
+    <h3>Accessing an Element's class</h3>
+    <p>
+      It is often considered bad practice to have code that is unrelated to the
+      main idea of a document seperate in other document; html should be defined
+      in html, likewise, css should be defined in css. There is a little mixing
+      here and there, but the best way is to have the javascript affect the
+      class element instead. One way to obtain all of the element's classes is
+      by using the property <strong>.className</strong>. .className returns
+      a space-seperated string of the class. By applying the .split() method to
+      this, we can get all the class names in a array. We can also override
+      all the classes of an element by assigning a new string to the property.
+      This method can have its uses, but its still a lot of work, there's
+      another newer property that will make things easier.
+    </p>
+    <p>
+      .classList will do the same thing as .className; however, it will return
+      the classes in a special list known as a DOMTokenList. The .classList also
+      has some of its own properties such as .add(), .remove(), .toggle(), and
+      .contains(). .contains() can be used to check if there is a certain class
+      in the element(will return true or false). .add and .remove allow you to
+      add and remove classes if need be. .toggle() will allow you to switch
+      between having a class on or off; if the class doesn't exist, it will
+      automatically be added. For more in .classList, check the
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">
+      MDN</a>
     </p>
 
     <h3>What is an event?</h3>
